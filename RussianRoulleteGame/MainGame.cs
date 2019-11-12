@@ -56,11 +56,7 @@ namespace RussianRoulleteGame
                 MessageBox.Show("This is Blank Fire");
                 totalShoot = totalShoot - 1;//minus one from total
                 bullets.GameSpin = bullets.GameShootLoop(bullets.GameSpin);
-                gunTry--;
-            }
-            if(gunTry<1)
-            {
-                shootAwayBtn.Enabled = false;
+                
             }
         }
 
@@ -93,7 +89,13 @@ namespace RussianRoulleteGame
                 MessageBox.Show("Blank Fire");
                 totalShoot = totalShoot - 1;
                 bullets.GameSpin = bullets.GameShootLoop(bullets.GameSpin);
+                gunTry--;
+            }
 
+
+            if (gunTry < 1)
+            {
+                shootAwayBtn.Enabled = false;
             }
         }
 
